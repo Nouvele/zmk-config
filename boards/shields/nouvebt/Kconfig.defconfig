@@ -1,0 +1,4 @@
+if SHIELD_NOUVEBT
+config ZMK_KEYBOARD_NAME
+    default "nouvebt"
+endif

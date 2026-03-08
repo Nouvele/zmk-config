@@ -1,0 +1,25 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp ESC                                          // Przycisk w lewym górnym rogu (Rząd 0)
+                &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y  // Rząd 1
+                &kp A    &kp S    &kp D    &kp F    &kp G    &kp H  // Rząd 2
+                &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N  // Rząd 3
+                &kp LCTL &kp LALT &kp LCMD &kp SPACE &kp ENTER &kp BSPC // Rząd 4
+            >;
+        };
+    };
+};
