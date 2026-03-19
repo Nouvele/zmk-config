@@ -15,10 +15,10 @@
         default_layer {
             bindings = <
                 &kp ESC                                          // Przycisk w lewym górnym rogu (Rząd 0)
-                &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y  // Rząd 1
-                &kp A    &kp S    &kp D    &kp F    &kp G    &kp H  // Rząd 2
-                &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N  // Rząd 3
-                &kp LCTL &kp LALT &kp LCMD &kp SPACE &kp ENTER &kp BSPC // Rząd 4
+                &kp ESC    &kp Q    &kp W    &kp E    &kp R    &kp T  // Rząd 1
+                &kp TAB    &kp A    &kp S    &kp D    &kp F    &kp G  // Rząd 2
+                &kp LSHFT    &kp Z    &kp X    &kp C    &kp V    &kp B  // Rząd 3
+                &kp LCTL &kp LGUI &kp LALT &kp SPACE &kp ENTER &kp SPACE // Rząd 4
             >;
         };
     };

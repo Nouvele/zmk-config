@@ -23,14 +23,14 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
-        diode-direction = "col2row";
+        diode-direction = "row2col";
 
         row-gpios
-            = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 0 (010)
-            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 1 (111)
-            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 2 (115)
-            , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 3 (002)
-            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 4 (029)
+            = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 0 (010)
+            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 1 (111)
+            , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 2 (115)
+            , <&gpio1 15  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 3 (002)
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Rząd 4 (029)
             ;
 
         col-gpios
