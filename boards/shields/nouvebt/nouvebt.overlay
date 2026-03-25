@@ -11,7 +11,7 @@
         columns = <6>;
         rows = <5>;
 
-        map = <
+        map = <tg
             RC(0,0)
             RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)
             RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)
@@ -27,10 +27,10 @@
 
         row-gpios
             = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-            , <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
-            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
             , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+            , <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
+            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> 
             ;
 
         col-gpios
