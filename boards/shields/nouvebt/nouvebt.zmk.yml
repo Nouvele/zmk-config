@@ -1,0 +1,11 @@
+file_format: "1"
+id: nouvebt
+name: NouveBT
+type: shield
+url: https://github.com/Nouvele/zmk-config
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - nouvebt_left
+  - nouvebt_right
