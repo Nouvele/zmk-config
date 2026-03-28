@@ -3,3 +3,5 @@ include:
     shield: nouvebt_left
   - board: nice_nano_v2
     shield: nouvebt_right
+  - board: nice_nano_v2
+    shield: settings_reset
