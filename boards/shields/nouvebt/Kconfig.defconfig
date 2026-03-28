@@ -1,4 +1,12 @@
-if SHIELD_NOUVEBT
-config ZMK_KEYBOARD_NAME
-    default "nouvebt"
+if SHIELD_NOUVEBT_LEFT
+    config ZMK_KEYBOARD_NAME
+        default "NouveBT"
+
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+endif
+
+if SHIELD_NOUVEBT_LEFT || SHIELD_NOUVEBT_RIGHT
+    config ZMK_SPLIT
+        default y
 endif
