@@ -1,2 +1,5 @@
-config SHIELD_NOUVEBT
-    def_bool $(shields_list_contains,nouvebt)
+config SHIELD_NOUVEBT_LEFT
+    def_bool $(shields_list_contains,nouvebt_left)
+
+config SHIELD_NOUVEBT_RIGHT
+    def_bool $(shields_list_contains,nouvebt_right)

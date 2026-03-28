@@ -3,23 +3,49 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    /* To jest ten brakujący "most" między Twoim overlay a keymapem */
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
+        // layer 0
         default_layer {
-            display-name = "Base";
             bindings = <
-                &kp ESC
-                &kp ESC    &kp Q    &kp W    &kp E    &kp R    &kp T 
-                &kp TAB    &kp A    &kp S    &kp D    &kp F    &kp G 
-                &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B 
-                &kp LCTL   &kp LGUI &kp LALT &kp SPACE &kp RET  &kp BSPC
+&kp GRAVE                                                                     &mo 3
+&kp ESC      &kp Q      &kp W      &kp E      &kp R      &kp T        &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
+&kp TAB      &kp A      &kp S      &kp D      &kp F      &kp G      &kp H   &kp J      &kp K      &kp L      &kp SEMI      &kp SQT
+&kp LSHIFT      &kp Z      &kp X      &kp C      &kp V      &kp B   &kp N &kp M      &kp COMMA      &kp DOT  &kp FSLH    &kp ENTER
+&kp LCTRL  &kp LGUI   &kp LALT   &mo 2  &mo 1  &kp SPACE      &kp SPACE    &kp RALT  &kp LEFT  &kp DOWN   &kp UP   &kp RIGHT
+            >;
+        };
+
+        // layer 1
+        lower_layer {
+            bindings = <
+&kp GRAVE                                                                      &trans
+&kp ESC     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
+&kp TAB     &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans
+&kp LSHIFT     &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans
+&kp LCTRL  &kp LGUI   &kp LALT   &trans  &trans  &kp SPACE      &kp SPACE    &kp RALT  &kp LEFT  &kp DOWN   &kp UP   &kp RIGHT
+            >;
+        };
+
+        // layer 2
+        raise_layer {
+            bindings = <
+&kp GRAVE                                                                      &trans
+&kp ESC     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR     &kp BSPC
+&kp TAB     &trans     &trans     &trans     &trans     &trans       &trans     &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH
+&kp LSHIFT     &trans     &trans     &trans     &trans     &trans       &trans     &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE 
+&kp LCTRL  &kp LGUI   &kp LALT   &trans  &trans  &kp SPACE      &kp SPACE    &kp RALT  &kp LEFT  &kp DOWN   &kp UP   &kp RIGHT
+            >;
+        };
+        // layer 3
+        system_layer {
+            bindings = <
+&trans                                                                  &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3     &trans       &trans     &trans     &trans     &trans     &trans     &trans
+&trans       &trans       &trans       &trans       &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans
+&trans       &trans       &trans       &trans       &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans
+&trans       &trans       &trans       &trans       &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
     };
